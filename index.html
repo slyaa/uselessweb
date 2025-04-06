@@ -1,5 +1,5 @@
-  <!DOCTYPE html>
-  <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -32,11 +32,14 @@
         overflow: hidden;
         color: #fff;
         position: relative;
+        cursor: pointer;
       }
-      .card:hover {
+
+      .card.clicked {
         height: 280px;
         transform: skew(0deg);
       }
+
       .card h3 {
         text-align: center;
         margin: 1.3rem 0 0.5rem;
@@ -44,6 +47,7 @@
         font-size: 1.2rem;
         text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
       }
+
       .card p {
         color: #f0f0f0;
         font-size: 0.9rem;
@@ -52,9 +56,11 @@
         opacity: 0;
         transition: opacity 0.3s ease-in-out;
       }
-      .card:hover p {
+
+      .card.clicked p {
         opacity: 1;
       }
+
       .download-btn {
         opacity: 0;
         display: block;
@@ -69,12 +75,9 @@
         cursor: pointer;
         transition: all 0.3s ease-in-out;
       }
-      .card:hover .download-btn {
+
+      .card.clicked .download-btn {
         opacity: 1;
-      }
-      .download-btn:hover {
-        background: #00d1b2;
-        color: white;
       }
 
       .uiverse-btn {
@@ -88,6 +91,7 @@
         cursor: pointer;
         transition: all 0.3s ease-in-out;
       }
+
       .uiverse-btn:hover {
         background: #00d1b2;
         color: white;
@@ -100,7 +104,6 @@
   <body>
     <header>
       <h1>Ayman Alsaleh</h1>
-      <!-- Wrap both parts of the text in a span element to apply the shine effect -->
       <p class="btn-shine">
         <span>Medical Student</span> | <span>Cybersecurity Enthusiast</span>
       </p>
@@ -114,12 +117,7 @@
 
     <section id="about">
       <h2>About Me</h2>
-      <p>I am lowkey a disappointment to my family, slowly losing my interest in things that I like, but hey I am a cool dude that is into scrolling on tiktok. I also love making puzzles and 
-        ciphering text or anyhting you can think of. This website is only made as a display and nothing more I might use it in the future but for now I will leave it as it is.      3301
-      </p>
-      <div style="text-align:center; margin-top:1.5rem;">
-        
-      </div>
+      <p>I am lowkey a disappointment to my family, slowly losing my interest in things that I like, but hey I am a cool dude that is into scrolling on tiktok. I also love making puzzles and ciphering text or anything you can think of. This website is only made as a display and nothing more I might use it in the future but for now I will leave it as it is. 3301</p>
     </section>
 
     <section id="projects">
@@ -152,5 +150,16 @@
     <footer>
       <p>&copy; 2025 Ayman Alsaleh. This Website is only for showcase.</p>
     </footer>
+
+    <script>
+      // Add event listener for click event to toggle the "clicked" class
+      const cards = document.querySelectorAll('.card');
+      
+      cards.forEach(card => {
+        card.addEventListener('click', () => {
+          card.classList.toggle('clicked');
+        });
+      });
+    </script>
   </body>
-  </html>
+</html>
