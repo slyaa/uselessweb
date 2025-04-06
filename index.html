@@ -1,0 +1,156 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ayman-Inspired Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      body { font-family: 'Inter', sans-serif; background: #0f0f0f; color: #fff; line-height: 1.6; }
+      header, section { padding: 4rem 2rem; max-width: 960px; margin: auto; }
+      header { text-align: center; }
+      h1 { font-size: 3rem; font-weight: 700; text-align: center; }
+      h2 { font-size: 2rem; margin-bottom: 1rem; }
+      p { max-width: 700px; margin: 1rem auto; color: #ddd; font-size: 0.95rem; }
+      nav a { margin: 0 1rem; text-decoration: none; color: #00d1b2; font-weight: 600; }
+
+      .projects { display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; margin-top: 2rem; }
+      .card {
+        width: 220px;
+        height: 120px;
+        padding: 1rem;
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 10px;
+        backdrop-filter: blur(6px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: -10px 20px 30px rgba(0, 0, 0, 0.25);
+        transform: skewX(10deg);
+        transition: .4s ease;
+        overflow: hidden;
+        color: #fff;
+        position: relative;
+      }
+      .card:hover {
+        height: 280px;
+        transform: skew(0deg);
+      }
+      .card h3 {
+        text-align: center;
+        margin: 1.3rem 0 0.5rem;
+        color: #e6f7f4;
+        font-size: 1.2rem;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+      }
+      .card p {
+        color: #f0f0f0;
+        font-size: 0.9rem;
+        padding: 0 0.5rem;
+        text-align: center;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+      }
+      .card:hover p {
+        opacity: 1;
+      }
+      .download-btn {
+        opacity: 0;
+        display: block;
+        margin: 1rem auto 0;
+        background-color: transparent;
+        border: 2px solid #00d1b2;
+        color: #00d1b2;
+        font-weight: 600;
+        border-radius: 6px;
+        padding: 0.4rem 1rem;
+        font-size: 0.85rem;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+      }
+      .card:hover .download-btn {
+        opacity: 1;
+      }
+      .download-btn:hover {
+        background: #00d1b2;
+        color: white;
+      }
+
+      .uiverse-btn {
+        position: relative;
+        padding: 0.8rem 1.5rem;
+        background: transparent;
+        border: 2px solid #00d1b2;
+        color: #00d1b2;
+        font-weight: 600;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+      }
+      .uiverse-btn:hover {
+        background: #00d1b2;
+        color: white;
+      }
+
+      .contact { text-align: center; }
+      footer { text-align: center; padding: 2rem; font-size: 0.9rem; color: #777; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Ayman Alsaleh</h1>
+      <!-- Wrap both parts of the text in a span element to apply the shine effect -->
+      <p class="btn-shine">
+        <span>Medical Student</span> | <span>Cybersecurity Enthusiast</span>
+      </p>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+    
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I am lowkey a disappointment to my family, slowly losing my interest in things that I like, but hey I am a cool dude that is into scrolling on tiktok. I also love making puzzles and 
+        ciphering text or anyhting you can think of. This website is only made as a display and nothing more I might use it in the future but for now I will leave it as it is.      3301
+      </p>
+      <div style="text-align:center; margin-top:1.5rem;">
+        
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="projects">
+        <div class="card">
+          <h3>Portfolio Website</h3>
+          <p>A personal portfolio site showcasing projects and skills. Built with HTML, CSS, and JS.</p>
+          <button class="download-btn">View</button>
+        </div>
+        <div class="card">
+          <h3>Task Manager App</h3>
+          <p>A productivity web app to manage tasks efficiently. Uses localStorage and smooth animations.</p>
+          <button class="download-btn">View</button>
+        </div>
+        <div class="card">
+          <h3>Weather Dashboard</h3>
+          <p>Displays real-time weather data using OpenWeatherMap API and responsive charts.</p>
+          <button class="download-btn">View</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact Me</h2>
+      <p>Email me at: <a href="mailto:namyawork@proton.me" style="color:#00d1b2">namyawork@proton.me</a></p>
+      <button class="uiverse-btn" onclick="alert('Thanks for reaching out!')">Say Hello</button>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Ayman Alsaleh. This Website is only for showcase.</p>
+    </footer>
+  </body>
+  </html>
